@@ -1,5 +1,6 @@
 services:
   mysql:
+    container_name: 'StoreSalesDB'
     image: 'mysql:latest'
     environment:
       - 'MYSQL_DATABASE=store_db'
