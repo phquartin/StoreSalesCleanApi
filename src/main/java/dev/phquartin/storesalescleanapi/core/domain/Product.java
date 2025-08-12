@@ -5,7 +5,7 @@ public record Product(
         String name,
         Category category,
         Double price,
-        Integer quantity,
+        Integer stock,
         String imgUrl,
         String description
 ) {
