@@ -1,5 +1,7 @@
 package dev.phquartin.storesalescleanapi.core.domain;
 
+import dev.phquartin.storesalescleanapi.core.enums.MeasureUnit;
+
 public record Product(
         Long code,
         String name,
@@ -7,6 +9,7 @@ public record Product(
         Double price,
         Integer stock,
         String imgUrl,
-        String description
+        String description,
+        MeasureUnit measureUnit
 ) {
 }

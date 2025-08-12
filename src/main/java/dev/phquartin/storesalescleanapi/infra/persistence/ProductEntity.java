@@ -1,5 +1,6 @@
 package dev.phquartin.storesalescleanapi.infra.persistence;
 
+import dev.phquartin.storesalescleanapi.core.enums.MeasureUnit;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,4 +34,9 @@ public class ProductEntity {
     private String imgUrl;
 
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "unit_of_measure", nullable = false)
+    private MeasureUnit measureUnit;
+
 }
