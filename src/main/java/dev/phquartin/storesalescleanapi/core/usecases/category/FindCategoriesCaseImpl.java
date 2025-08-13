@@ -4,8 +4,9 @@ import dev.phquartin.storesalescleanapi.core.domain.Category;
 
 import java.util.List;
 
-public interface findCategoriesCase {
-
-    List<Category> execute();
-
+public class FindCategoriesCaseImpl implements FindCategoriesCase {
+    @Override
+    public List<Category> execute() {
+        return null;
+    }
 }

@@ -4,8 +4,9 @@ import dev.phquartin.storesalescleanapi.core.domain.Product;
 
 import java.util.List;
 
-public interface findProductsCase {
-
-    List<Product> execute();
-
+public class FindProductsCaseImpl implements FindProductsCase {
+    @Override
+    public List<Product> execute() {
+        return null;
+    }
 }
