@@ -2,7 +2,7 @@ package dev.phquartin.storesalescleanapi.infra.gateway;
 
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.core.gateway.CategoryGateway;
-import dev.phquartin.storesalescleanapi.infra.mapper.CategoryEntityMapper;
+import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryEntityMapper;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryRepository;
 import org.springframework.stereotype.Component;
 

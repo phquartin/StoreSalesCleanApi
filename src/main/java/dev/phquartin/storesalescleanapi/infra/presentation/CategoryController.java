@@ -2,7 +2,7 @@ package dev.phquartin.storesalescleanapi.infra.presentation;
 
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.core.usecases.category.CreateCategoryCase;
-import dev.phquartin.storesalescleanapi.infra.mapper.CategoryMapper;
+import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryMapper;
 import dev.phquartin.storesalescleanapi.infra.presentation.request.CategoryRequest;
 import dev.phquartin.storesalescleanapi.infra.presentation.response.CategoryResponse;
 import jakarta.validation.Valid;

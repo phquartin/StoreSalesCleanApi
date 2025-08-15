@@ -1,4 +1,4 @@
-package dev.phquartin.storesalescleanapi.infra.mapper;
+package dev.phquartin.storesalescleanapi.infra.mapper.category;
 
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
