@@ -3,15 +3,17 @@ package dev.phquartin.storesalescleanapi.infra.gateway;
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.core.gateway.CategoryGateway;
 import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryEntityMapper;
+import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class CategoryRepositoryGateway implements CategoryGateway {
-
     private final CategoryRepository repository;
-    private final CategoryEntityMapper mapper;
 
+    private final CategoryEntityMapper mapper;
     public CategoryRepositoryGateway(CategoryRepository repository, CategoryEntityMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
@@ -30,5 +32,13 @@ public class CategoryRepositoryGateway implements CategoryGateway {
                         mapper.toEntity(category)
                 )
         );
+    }
+
+    @Override
+    public List<Category> findAll() {
+        List<CategoryEntity> allCategoriesEntity = repository.findAll();
+        return allCategoriesEntity.stream()
+                .map(mapper::toDomain)
+                .toList();
     }
 }
