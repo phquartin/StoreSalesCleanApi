@@ -1,5 +1,6 @@
 package dev.phquartin.storesalescleanapi.infra.configuration;
 
+import dev.phquartin.storesalescleanapi.infra.exception.DataNotFoundException;
 import dev.phquartin.storesalescleanapi.infra.presentation.response.ErroResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
@@ -58,11 +59,11 @@ public class GlobalHandlerException {
         return ResponseEntity.status(erro.status()).body(erro);
     }
 
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ErroResponse> handleIllegalArgumentException(IllegalArgumentException exception, HttpServletRequest request){
+    @ExceptionHandler(DataNotFoundException.class)
+    public ResponseEntity<ErroResponse> handleDataNotFoundException(DataNotFoundException exception, HttpServletRequest request){
         ErroResponse erro = ErroResponse.builder()
                 .message(exception.getMessage())
-                .status(HttpStatus.BAD_REQUEST)
+                .status(HttpStatus.NOT_FOUND)
                 .path(request.getRequestURI())
                 .timestamp(LocalDateTime.now().format(formatter))
                 .build();

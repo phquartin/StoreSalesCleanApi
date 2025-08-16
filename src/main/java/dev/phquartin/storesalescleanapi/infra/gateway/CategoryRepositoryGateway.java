@@ -2,9 +2,11 @@ package dev.phquartin.storesalescleanapi.infra.gateway;
 
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.core.gateway.CategoryGateway;
+import dev.phquartin.storesalescleanapi.infra.exception.DataNotFoundException;
 import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryEntityMapper;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryRepository;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -42,8 +44,9 @@ public class CategoryRepositoryGateway implements CategoryGateway {
                 .toList();
     }
 
+    @SneakyThrows
     @Override
     public Category findByName(String name) {
-       return mapper.toDomain(repository.findByName(name).orElseThrow(() -> new IllegalArgumentException("Categoria " + name + " nao encontrada!")));
+       return mapper.toDomain(repository.findByName(name).orElseThrow(() -> new DataNotFoundException("Categoria " + name + " nao encontrada!")));
     }
 }
