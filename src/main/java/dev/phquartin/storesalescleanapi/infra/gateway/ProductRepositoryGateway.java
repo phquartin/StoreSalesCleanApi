@@ -26,7 +26,6 @@ public class ProductRepositoryGateway implements ProductGateway {
         this.categoryRepository = categoryRepository;
     }
 
-    @SneakyThrows
     @Override
     public Product create(Product product) {
 
