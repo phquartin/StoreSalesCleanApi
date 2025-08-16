@@ -44,6 +44,6 @@ public class CategoryRepositoryGateway implements CategoryGateway {
 
     @Override
     public Category findByName(String name) {
-       return mapper.toDomain(repository.findByName(name));
+       return mapper.toDomain(repository.findByName(name).orElseThrow(() -> new IllegalArgumentException("Categoria " + name + " nao encontrada!")));
     }
 }
