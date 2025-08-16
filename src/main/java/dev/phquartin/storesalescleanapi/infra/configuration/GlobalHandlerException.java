@@ -1,7 +1,7 @@
 package dev.phquartin.storesalescleanapi.infra.configuration;
 
 import dev.phquartin.storesalescleanapi.infra.exception.DataNotFoundException;
-import dev.phquartin.storesalescleanapi.infra.presentation.response.ErroResponse;
+import dev.phquartin.storesalescleanapi.infra.exception.ErroResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.support.DefaultMessageSourceResolvable;

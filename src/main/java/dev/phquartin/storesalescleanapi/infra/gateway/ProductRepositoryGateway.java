@@ -8,7 +8,6 @@ import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryRepository;
 import dev.phquartin.storesalescleanapi.infra.persistence.ProductEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.ProductRepository;
-import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

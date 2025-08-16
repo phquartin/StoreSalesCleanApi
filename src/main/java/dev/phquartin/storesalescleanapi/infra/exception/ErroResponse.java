@@ -1,4 +1,4 @@
-package dev.phquartin.storesalescleanapi.infra.presentation.response;
+package dev.phquartin.storesalescleanapi.infra.exception;
 
 import lombok.Builder;
 import org.springframework.http.HttpStatus;

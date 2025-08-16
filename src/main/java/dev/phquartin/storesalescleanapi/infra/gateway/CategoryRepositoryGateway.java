@@ -6,7 +6,6 @@ import dev.phquartin.storesalescleanapi.infra.exception.DataNotFoundException;
 import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryEntityMapper;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.CategoryRepository;
-import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
