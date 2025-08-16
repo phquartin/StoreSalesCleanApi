@@ -5,6 +5,8 @@ import dev.phquartin.storesalescleanapi.core.gateway.ProductGateway;
 import dev.phquartin.storesalescleanapi.core.usecases.category.*;
 import dev.phquartin.storesalescleanapi.core.usecases.product.CreateProductCase;
 import dev.phquartin.storesalescleanapi.core.usecases.product.CreateProductCaseImpl;
+import dev.phquartin.storesalescleanapi.core.usecases.product.FindProductsCase;
+import dev.phquartin.storesalescleanapi.core.usecases.product.FindProductsCaseImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,4 +37,8 @@ public class BeanConfiguration {
         return new CreateProductCaseImpl(gateway);
     }
 
+    @Bean
+    public FindProductsCase findProductsCase(ProductGateway gateway) {
+        return new FindProductsCaseImpl(gateway);
+    }
 }

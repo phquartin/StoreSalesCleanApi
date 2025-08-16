@@ -9,6 +9,8 @@ import dev.phquartin.storesalescleanapi.infra.persistence.ProductEntity;
 import dev.phquartin.storesalescleanapi.infra.persistence.ProductRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class ProductRepositoryGateway implements ProductGateway {
 
@@ -35,5 +37,13 @@ public class ProductRepositoryGateway implements ProductGateway {
                         productEntity
                 )
         );
+    }
+
+    @Override
+    public List<Product> findAll() {
+        return repository.findAll()
+                .stream()
+                .map(mapper::toDomain)
+                .toList();
     }
 }
