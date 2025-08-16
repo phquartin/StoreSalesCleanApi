@@ -41,4 +41,9 @@ public class CategoryRepositoryGateway implements CategoryGateway {
                 .map(mapper::toDomain)
                 .toList();
     }
+
+    @Override
+    public Category findByName(String name) {
+       return mapper.toDomain(repository.findByName(name));
+    }
 }

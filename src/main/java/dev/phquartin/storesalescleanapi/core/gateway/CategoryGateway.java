@@ -9,4 +9,6 @@ public interface CategoryGateway {
     Category create(Category category);
 
     List<Category> findAll();
+
+    Category findByName(String name);
 }
