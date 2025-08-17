@@ -14,11 +14,12 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class SaleItensEntity {
+
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "product_code", nullable = false)
     private ProductEntity product;
 
@@ -28,7 +29,7 @@ public class SaleItensEntity {
     @Column(nullable = false)
     private Double price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "sale_id", nullable = false)
     @JsonIgnore
     private SaleEntity sale;
