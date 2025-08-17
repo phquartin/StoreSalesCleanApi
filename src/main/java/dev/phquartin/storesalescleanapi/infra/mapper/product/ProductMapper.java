@@ -16,7 +16,7 @@ public class ProductMapper {
 
     public Product toDomain(ProductRequest request) {
         return new Product(
-                request.code(),
+                null,
                 request.name(),
                 categoryMapper.toDomain(request.category()),
                 request.price(),
