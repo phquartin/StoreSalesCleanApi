@@ -1,7 +1,7 @@
 package dev.phquartin.storesalescleanapi.infra.mapper.category;
 
 import dev.phquartin.storesalescleanapi.core.domain.Category;
-import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
+import dev.phquartin.storesalescleanapi.infra.persistence.category.CategoryEntity;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,4 +1,4 @@
-package dev.phquartin.storesalescleanapi.infra.persistence;
+package dev.phquartin.storesalescleanapi.infra.persistence.category;
 
 import jakarta.persistence.*;
 import lombok.*;

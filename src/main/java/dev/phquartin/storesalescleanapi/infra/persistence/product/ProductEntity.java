@@ -1,6 +1,7 @@
-package dev.phquartin.storesalescleanapi.infra.persistence;
+package dev.phquartin.storesalescleanapi.infra.persistence.product;
 
 import dev.phquartin.storesalescleanapi.core.enums.MeasureUnit;
+import dev.phquartin.storesalescleanapi.infra.persistence.category.CategoryEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

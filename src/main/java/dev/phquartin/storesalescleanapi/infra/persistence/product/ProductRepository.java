@@ -1,4 +1,4 @@
-package dev.phquartin.storesalescleanapi.infra.persistence;
+package dev.phquartin.storesalescleanapi.infra.persistence.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

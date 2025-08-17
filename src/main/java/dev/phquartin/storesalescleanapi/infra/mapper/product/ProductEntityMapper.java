@@ -3,8 +3,8 @@ package dev.phquartin.storesalescleanapi.infra.mapper.product;
 import dev.phquartin.storesalescleanapi.core.domain.Category;
 import dev.phquartin.storesalescleanapi.core.domain.Product;
 import dev.phquartin.storesalescleanapi.infra.mapper.category.CategoryEntityMapper;
-import dev.phquartin.storesalescleanapi.infra.persistence.CategoryEntity;
-import dev.phquartin.storesalescleanapi.infra.persistence.ProductEntity;
+import dev.phquartin.storesalescleanapi.infra.persistence.category.CategoryEntity;
+import dev.phquartin.storesalescleanapi.infra.persistence.product.ProductEntity;
 import org.springframework.stereotype.Component;
 
 @Component
